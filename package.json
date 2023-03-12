@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^7.0.0-alpha.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
-    "react-helmet": "^6.1.0",
-"@ant-design/icons": "^4.0.5",
+    "@ant-design/icons": "^4.0.5",
     "@apollo/client": "^3.5.9",
+    "@craco/craco": "^7.0.0-alpha.0",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@headlessui/react": "^1.7.1",
@@ -21,8 +17,9 @@
     "@mui/styles": "^5.4.1",
     "@stripe/react-stripe-js": "^1.7.0",
     "@stripe/stripe-js": "^1.24.0",
+    "@teleporthq/teleport-project-generator-gatsby": "^0.25.4",
     "antd": "^4.22.6",
-"gatsby": "^4.19.2",
+    "gatsby": "^4.19.2",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-antd": "^2.2.0",
     "gatsby-plugin-canonical-urls": "^4.20.0",
@@ -40,22 +37,23 @@
     "gatsby-plugin-styled-components": "^5.7.0",
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-source-graphql": "^2.3.0",
-    "gatsby-transformer-sharp": "^4.7.0"
+    "gatsby-transformer-sharp": "^4.7.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test --env=jsdom",
+    "start": "npm run develop",
+    "build": "NODE_OPTIONS=--max-old-space-size=8192 gatsby build",
+    "test": "jest",
     "eject": "craco eject",
-"build": "NODE_OPTIONS=--max-old-space-size=8192 gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "build:prod": "NODE_ENV=production gatsby build",
     "develop:prod": "NODE_ENV=live NODE_OPTIONS=--max-old-space-size=8192 yarn develop",
-    "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest",
     "test:watch": "jest --watch",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "deploy:prod": "./src/tools/scripts/deploy.sh",
@@ -63,7 +61,7 @@
     "add:component": "./src/tools/scripts/addComponent.sh"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.8.0"
   },
   "browserslist": {
     "production": [
@@ -78,9 +76,9 @@
     ]
   },
   "devDependencies": {
-    "react-scripts": "^5.0.1",
-    "tailwindcss": "^3.0.24",
     "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.14"
+    "postcss": "^8.4.14",
+    "react-scripts": "^5.0.1",
+    "tailwindcss": "^3.0.24"
   }
 }
