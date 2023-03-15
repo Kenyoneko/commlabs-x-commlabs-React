@@ -48,17 +48,7 @@
     "build": "NODE_OPTIONS=--max-old-space-size=8192 gatsby build",
     "test": "jest",
     "eject": "craco eject",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "build:prod": "NODE_ENV=production gatsby build",
-    "develop:prod": "NODE_ENV=live NODE_OPTIONS=--max-old-space-size=8192 yarn develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test:watch": "jest --watch",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "deploy:prod": "./src/tools/scripts/deploy.sh",
-    "add:page": "./src/tools/scripts/addPage.sh",
-    "add:component": "./src/tools/scripts/addComponent.sh"
+    
   },
   "engines": {
     "node": "18.8.0"
